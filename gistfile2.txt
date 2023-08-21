@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataLayer
+{
+
+    public class DbConnection
+    {
+        public SqlConnection sqlConnection()
+        {
+            SqlConnection sqlConnection = new SqlConnection(@"Server=SEROOASUS\SQLEXPRESS;Database=Diary;Trusted_Connection=True;");
+            sqlConnection.Open();
+            return sqlConnection;
+        }
+        public SqlCommand sqlCommand(string qurey)
+        {
+            SqlCommand sqlComman = new SqlCommand(qurey, sqlConnection());
+            return sqlComman;
+        }
+    }
+    
+}

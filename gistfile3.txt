@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IMetodLayer
+{
+    public interface IMetods
+    {
+        void Menu();
+        void Record();
+        void Login();
+        void ChechSecirty();
+        void UpdatePassword(int Id);
+        void Entrance(int Id);
+        void NewRegister(int Id);
+        void ReadNew(int Id);
+       void AllRegister(int userId);
+        void List(int day, int userId);
+
+        void Update(int Id, int userId);
+        void ExitProgram();
+        void DeleteAllData(int Id);
+        void NewRecord(string userName, string firstName, string lastName, string hashPassword, string securityQuestion, string hasResponse);
+    }
+}

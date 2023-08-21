@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Text;
+using IMetodLayer;
+using DomainLayer;
+namespace Günlük
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            IMetods metods = new DomainMetods();
+            metods.Menu();
+        }
+
+    }
+}
